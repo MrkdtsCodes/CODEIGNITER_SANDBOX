@@ -70,39 +70,32 @@
     </thead>
     <tbody>
       <tr>
-        <td><?php echo $message; ?></td>
+        <?php 
+
+        foreach($student_list as $stud){
+            echo '<tr>';
+                echo '<td>'. $stud['id'] .'</td>';
+                echo '<td>'. $stud['Name'] .'</td>';
+                echo '<td>'. $stud['Age'] .'</td>';
+                echo '<td>'. $stud['Course'] .'</td>';
+                echo '<td>'. $stud['grade'] .'</td>';
+            echo '</tr>';
+
+            if($stud['Name'] === "Mark Andrie"){
+                $find = $stud['Name'];
+            }
+        }
+         
         
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>Juan Dela Cruz</td>
-        <td>21</td>
-        <td>Information Technology</td>
-        <td>B+</td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>Ana Reyes</td>
-        <td>19</td>
-        <td>Computer Engineering</td>
-        <td>A-</td>
-      </tr>
-      <tr>
-        <td>4</td>
-        <td>Carlo Mendoza</td>
-        <td>22</td>
-        <td>Information Systems</td>
-        <td>B</td>
-      </tr>
-      <tr>
-        <td>5</td>
-        <td>Lea Garcia</td>
-        <td>20</td>
-        <td>Computer Science</td>
-        <td>A+</td>
+
+        
+        
+        ?>
       </tr>
     </tbody>
   </table>
+
+ 
 
 </body>
 </html>

@@ -53,4 +53,7 @@ $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-$route['example'] = 'Examples/displayTable';
+$route['example'] = 'Pages_Controllers/Examples/displayTable';
+
+//passing params through route
+$route['find/(:any)'] = 'Pages_Controllers/Examples/findstud/$1';
