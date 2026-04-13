@@ -20,10 +20,26 @@ class Students_models extends CI_Model{
             ["id" => "014", "Name" => "Trisha Evangelista", "Age" => "19", "Course" => "BSN",   "grade" => "1st year"],
             ["id" => "015", "Name" => "Gab Soriano",        "Age" => "22", "Course" => "BSCS",  "grade" => "4th year"],
         ];
+    public $foundStuds = '';
+
 
     //getters so pur controller can access this
 
     public function getstuddata(){
         return $this->student_data;
+    }
+
+
+    public function CatchValsFromControllers($params){
+
+        
+        //dadating na yung pinasang
+        foreach($this->student_data as $students){
+            if($students['id'] === $params){
+
+                return $students; //buong array ang ipasa
+            }   
+        }
+
     }
 }

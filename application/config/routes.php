@@ -56,4 +56,4 @@ $route['translate_uri_dashes'] = FALSE;
 $route['example'] = 'Pages_Controllers/Examples/displayTable';
 
 //passing params through route
-$route['find/(:any)'] = 'Pages_Controllers/Examples/findstud/$1';
+$route['find/(:any)'] = 'Pages_Controllers/Examples/catchvalue/$1';

@@ -1,4 +1,7 @@
 <?php
+/**
+ * @property Students_models $Students_models
+ */
 
     class Examples extends CI_Controller{
 
@@ -21,12 +24,12 @@
 
 
         //load the models to this controller 
-        $this->load->model('students_models');
-        $students = $this->students_models->getstuddata();
+        // $this->load->model('Students_models');
+        // $students = $this->Students_models->getstuddata();
 
-        foreach($students as $key){
-            echo $key['Name'];
-        }
+        // foreach($students as $key){
+        //     echo $key['Name'] .  '<br>';
+        // }
             
         }
 
@@ -44,6 +47,20 @@
         // $this->load->view('pages/finds', $data);
             
         
+        }
+
+
+        public function catchvalue($vals){
+            // $this->load->model('Students_models')
+
+            $this->load->model('Students_models');
+
+            //pass the params to the model and get results
+            $data['students_identity'] = $this->Students_models->CatchValsFromControllers($vals);
+
+            //path to your model 
+           $this->load->view('pages/finds', $data);
+
         }
 
     }
