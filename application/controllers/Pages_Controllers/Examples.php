@@ -21,6 +21,7 @@
         // $data['student_list'] = $this->students;
 
         // $this->load->view('pages/example', $data);
+        $this->load->view('pages/example');
 
 
         //load the models to this controller 
@@ -47,6 +48,13 @@
         // $this->load->view('pages/finds', $data);
             
         
+        }
+
+
+        //pag tinype ko yung serch sa URL mag loload ng search page 
+        //naka route to
+        public function showSearch(){
+            $this->load->view('pages/searh');
         }
 
 
